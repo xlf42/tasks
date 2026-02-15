@@ -1,0 +1,26 @@
+{
+    "vetoes": 2,
+    "email": {
+        "from_address": "my@from.address.de",
+        "smtp_server": "my.mail.server.de",
+        "smtp_port": 25,
+        "smtp_username": "smtp_user",
+        "smtp_password": "smtp_password"
+    },
+    "users": {
+        "default_user": {
+            "full_name": "Default User",
+            "nickname": "DefUser",
+            "password": "default_password",
+            "token": "42",
+            "notify_email": "me@my.org"
+        },
+        "lovedone": {
+            "full_name": "Sweet Heart",
+            "nickname": "Sweetheart",
+            "password": "sweet_passwort",
+            "token": "12345678",
+            "notify_email": "me@my.org"
+        }
+    }
+}

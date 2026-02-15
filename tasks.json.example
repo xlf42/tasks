@@ -1,0 +1,66 @@
+{
+    "default_user": {
+        "tasks": [
+            {
+                "id": "dummy-task",
+                "title": "Nachdenken",
+                "when": "morgens nach dem Aufstehen",
+                "description": [
+                    "1. Denke an etwas Schönes",
+                    "1. Schreibe es auf einen Zettel",
+                    "1. Mache ein Foto des Zettels",
+                    "1. Richte das Foto als Hintergrundbild auf deinem Handy ein"
+                ]
+            },
+            {
+                "id": "dummy-task_2",
+                "title": "Beobachten",
+                "when": "auf dem Weg zur Arbeit",
+                "description": [
+                    "1. Suche einen Fahrgast mit Zeitung oder einem Buch",
+                    "1. Versuche die üBerschrift oder den Buchtitel zu erkennen",
+                    "1. Google danach und finde ein Bild davon"
+                ]
+            }
+        ]
+    },
+    "tamara": {
+        "tasks": [
+            {
+                "id": "sweet-surprise",
+                "title": "Süße Überraschung",
+                "when": [
+                    "- Wenn ich im Home-Office bin jetzt gleich",
+                    "- wenn ich in der Arbeit bin, am nächsten Home-Office-Tag"
+                ],
+                "description": [
+                    "1. Gehe zu mir",
+                    "2. Frage mich nach einer süßen Überraschung",
+                    "3. Du bekommst eine süße Überraschung"
+                ]
+            },
+            {
+                "id": "random-photo",
+                "title": "Zufalls-Foto",
+                "when": "jetzt gleich",
+                "description": [
+                    "1. Öffne die Fotos-App auf meinem iPhone",
+                    "2. Suche die Sammlung mit uns beiden",
+                    "3. Suche das 42. Foto in dieser Sammlung",
+                    "4. Beschreibe das Bild einer Whatsapp an mich in einem Satz"
+                ]
+            },
+            {
+                "id": "compliment",
+                "title": "Kompliment",
+                "when": "Jetzt gleich, wenn es noch zu früh am Morgen ist, warte bis zur Mittagspause",
+                "description": [
+                    "1. Mach dir selbst ein Kompliment für etwas, was am heutigen Tag passiert ist und wie du es behandelt hast",
+                    "2. Schreibe es auf einen kleinen Zettel",
+                    "3. Mache ein Foto davon",
+                    "4. Stelle dieses Bild bis zum Ende des Tages als Hintergrund deines iPhones ein"
+                ]
+            }
+        ]
+    }
+}

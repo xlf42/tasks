@@ -1,0 +1,18 @@
+[project]
+name = "tasks"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Axel Hoffmann", email = "xlf_github@schwabing.org"},
+]
+dependencies = ["markdown-it-py", "qrcode", "pillow"]
+requires-python = "==3.14.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[dependency-groups]
+lint = ["black", "flake8"]
+test = ["pytest"]
+
+[tool.pdm]
+distribution = false
