@@ -26,7 +26,7 @@
 <body>
     <h1>Du hast die Aufgabe $title abgelehnt</h1>
     <body>
-    Daf&uuml;r hast Du einen Joker verbraucht und eine andere Aufgabe r&uuml;ckt daf&uuml;r nach.
+    Daf&uuml;r hast Du einen Joker verbraucht.
     <p>
     Im Moment hast Du $used_vetoes Joker eingesetzt und kannst $remaining_vetoes Joker nutzen.
     </body>
