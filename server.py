@@ -120,7 +120,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             task_url = protocol + url + f"/tasks/show?id={idx}&token={token}"
             img_url = protocol + url + f"/tasks/qrcode?token={token}&url={task_url}"
             help_url = protocol + url + f"/tasks/help?id={idx}&token={token}"
-            help_img_url = protocol + url + f"/tasks/qrcode?token={token}&url={help_url}"
+            help_img_url = (
+                protocol + url + f"/tasks/qrcode?token={token}&url={help_url}"
+            )
             table_row = """<tr>
                 <td>Aufgabe: {title}</td>
                 <td>Scan mich!</td>
@@ -130,7 +132,11 @@ class RequestHandler(BaseHTTPRequestHandler):
             </tr>
             """
             table_content += table_row.format(
-                title=title, task_url=task_url, img_url=img_url, help_img_url=help_img_url, help_url=help_url
+                title=title,
+                task_url=task_url,
+                img_url=img_url,
+                help_img_url=help_img_url,
+                help_url=help_url,
             )
 
         table_content += """
