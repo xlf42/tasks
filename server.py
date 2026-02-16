@@ -119,14 +119,18 @@ class RequestHandler(BaseHTTPRequestHandler):
             title = task["title"]
             task_url = protocol + url + f"/tasks/show?id={idx}&token={token}"
             img_url = protocol + url + f"/tasks/qrcode?token={token}&url={task_url}"
+            help_url = protocol + url + f"/tasks/help?id={idx}&token={token}"
+            help_img_url = protocol + url + f"/tasks/qrcode?token={token}&url={help_url}"
             table_row = """<tr>
-                <td>{title}</td>
-                <td><img src="{img_url}" alt="QR Code" height="50" width="50"/></td>
-                <td><a href="{task_url}">{task_url}</a></td>
+                <td>Aufgabe: {title}</td>
+                <td>Scan mich!</td>
+                <td><a href="{task_url}"><img src="{img_url}" alt="QR Code" height="50" width="50"/></a></td>
+                <td>Scan hier für die Erkläurung des Spiels</td>
+                <td><a href="{help_url}"><img src="{help_img_url}" alt="QR Code" height="50" width="50"/></a></td>
             </tr>
             """
             table_content += table_row.format(
-                title=title, task_url=task_url, img_url=img_url
+                title=title, task_url=task_url, img_url=img_url, help_img_url=help_img_url, help_url=help_url
             )
 
         table_content += """

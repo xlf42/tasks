@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Server (pdm run)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "server",
+            "console": "integratedTerminal",
+            "preLaunchTask": "pdm-install"
+        },
+        {
+            "name": "Pytest (test_server.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": ["test_server.py", "-v", "-s"],
+            "console": "integratedTerminal",
+            "preLaunchTask": "pdm-install"
+        }
+    ]
+}

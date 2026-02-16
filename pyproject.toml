@@ -12,7 +12,23 @@ license = {text = "MIT"}
 
 [dependency-groups]
 lint = ["black", "flake8"]
-test = ["pytest"]
+test = ["pytest", "requests", "beautifulsoup4", "pytest-cov", "coverage"]
 
 [tool.pdm]
 distribution = false
+
+[tool.coverage.run]
+source = ["server", "tasks", "config", "notify"]
+omit = ["test_*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"

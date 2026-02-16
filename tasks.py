@@ -5,6 +5,7 @@ import sqlite3
 
 import os
 import sys
+import time
 
 import config
 import notify
@@ -255,6 +256,9 @@ def show_task(user, id, db_name=DB_NAME):
             set_task_status(task, "found", user=user, db_name=db_name)
             return pending_task
     print(f"Showing task: {task['title']}")
+    # we set the task to found and show, so that we can track that the user is working on it
+    set_task_status(task, "found", user=user, db_name=db_name)
+    time.sleep(1)  # we wait a bit to have a different timestamp for the show action
     set_task_status(task, "show", user=user, db_name=db_name)
     notify.send_notification_email(
         notification_email,
