@@ -26,9 +26,6 @@
 <body>
     <h1>$title</h1>
     <body>
-        <b>Status der Aufgabe</b>
-        $status
-        <br>
         Du kannst diese Aufgabe nicht mehr erledigen, weil Du sie abgelehnt hast. Trotzdem findest Du
         hier die Beschreibung:
         <br>

@@ -26,9 +26,6 @@
 <body>
     <h1>$title</h1>
     <body>
-        <b>Status der Aufgabe</b>
-        $status
-        <br>
         <b>Wann solltest Du Diese Aufgabe am besten beginnen:</b>
         <br>
         $when
