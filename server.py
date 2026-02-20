@@ -127,7 +127,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 <td>Aufgabe: {title}</td>
                 <td>Scan mich!</td>
                 <td><a href="{task_url}"><img src="{img_url}" alt="QR Code" height="50" width="50"/></a></td>
-                <td>Scan hier für die Erkläurung des Spiels</td>
+                <td>Scan hier für die Erklärung des Spiels</td>
                 <td><a href="{help_url}"><img src="{help_img_url}" alt="QR Code" height="50" width="50"/></a></td>
             </tr>
             """
