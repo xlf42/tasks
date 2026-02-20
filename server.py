@@ -30,9 +30,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             task["description"] = "\n".join(task["description"])
         task["description"] = md.render(task["description"])
         task["remaining_vetoes"] = tasks.get_remaining_vetoes(task["user"])
+        task["used_vetoes"] = config.read_config()["vetoes"] - task["remaining_vetoes"]
         if task["remaining_vetoes"] == 0:
             task["remaining_vetoes"] = "keinen"
-        task["used_vetoes"] = config.read_config()["vetoes"] - task["remaining_vetoes"]
         if task["used_vetoes"] == 0:
             task["used_vetoes"] = "keinen"
         # we get the task status to display it
@@ -86,7 +86,10 @@ class RequestHandler(BaseHTTPRequestHandler):
             elif task_status == "Erledigt":
                 self._show_page(task, "task_show_done.tpl")
             else:
-                self._show_page(task, "task_show.tpl")
+                if tasks.get_remaining_vetoes(user) == 0:
+                    self._show_page(task, "task_show_no_vetoes.tpl")
+                else:
+                    self._show_page(task, "task_show.tpl")
         else:
             self._show_page(result, "task_show_not_found.tpl")
 
